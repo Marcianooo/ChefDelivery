@@ -1,18 +1,22 @@
-//
-//  ProductDetailView.swift
-//  ChefDelivery
-//
-//  Created by italo Marciano on 22/10/24.
-//
-
 import SwiftUI
 
 struct ProductDetailView: View {
+    
+    let product: ProductType
+    @State private var productQuantity: Int = 1
+    
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+            ProductDetailHeaderView(product: product)
+            Spacer()
+            ProductDetailQuantityView(productQuantity: $productQuantity)
+            Spacer()
+            ProductDetailButtonView()
+        }
     }
 }
 
 #Preview {
-    ProductDetailView()
+    ProductDetailView(product: storesMock[0].products[0])
 }

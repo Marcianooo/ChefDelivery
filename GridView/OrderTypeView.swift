@@ -13,5 +13,5 @@ struct OrderTypeView: View {
 }
 
 #Preview {
-    OrderTypeView(orderType: OrderType(id: 1, name: "Restaurantes", image: "hamburguer"))
+    OrderTypeView(orderType: OrderType(id: 5, name: "Descontos", image: "descontos"))
 }

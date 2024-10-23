@@ -1,15 +1,24 @@
-//
-//  ProductDetailButtonView.swift
-//  ChefDelivery
-//
-//  Created by italo Marciano on 22/10/24.
-//
-
 import SwiftUI
 
 struct ProductDetailButtonView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        Button {
+            print("O botão foi pressionado")
+        }label: {
+            HStack {
+                Image(systemName: "cart")
+                
+                Text("Adicionar ao carrinho")
+            }
+            .padding(.horizontal, 32)
+            .padding(.vertical, 16)
+            .font(.title3)
+            .bold()
+            .background(Color("ColorRed"))
+            .foregroundColor(.white)
+            .cornerRadius(32)
+            .shadow(color: Color("ColorRedDark").opacity(0.5), radius: 10, x: 6, y: 8)
+        }
     }
 }
 
